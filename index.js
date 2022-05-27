@@ -19,8 +19,15 @@ var questionsArr = [
         question: 'The mascot of Barry University is a parrot',
         answer: true,
     },
-];
+]
 
-function runQuiz() {
-    console.log(questionsArr);
+function runQuiz(){
+    var numOfAgrees = 0
+    for (var i = 0; i < questionsArr.length; i++) {
+        var userAnswer = confirm(questionsArr[i].question)
+        var answers = questionsArr[i].answer
+        if (userAnswer === answers){
+            numOfAgrees++
+        }
+    }
 }
