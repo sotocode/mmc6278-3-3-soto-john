@@ -30,4 +30,8 @@ function runQuiz(){
             numOfAgrees++
         }
     }
+    var score = (numOfAgrees / questionsArr.length) * 100
+    var finalScore = Math.round(score)
+
+    alert ('Your score is ' + finalScore +'%')
 }
